@@ -16,18 +16,10 @@ stackoverflow question: EXTRA_APPWIDGET_ID == invalid when
 
 upgrade HA on rpi
 
-fresh public github repo
-
-no input configuration... error snackbar...
-
-copy platform-sample for BR toast
-
 screenshots
 github readme
 play store description
 r/homeassistant
-
-implemented using rest api
 
 privacy policy
 https://tberghuis.dev/switch-widget/privacy-policy.html
