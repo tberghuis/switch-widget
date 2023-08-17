@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Switch Widget for HA</string>
+    <string name="app_widget_description">Switch Widget for HA</string>
+</resources>

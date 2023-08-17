@@ -1,0 +1,34 @@
+
+market reddit
+
+might need to wait until compileSdk 34 officially supported before play store release
+
+snackbar for errors
+
+stackoverflow question: EXTRA_APPWIDGET_ID == invalid when
+  requestPinGlanceAppWidget from MainActivity
+    appwidget-provider - configure activity
+    or make issue platform-samples github repo
+    show how i am using EXTRA_APPWIDGET_ID
+    show my solution hack .maxBy
+    put max stackoverflow bounty
+ 
+
+upgrade HA on rpi
+
+fresh public github repo
+
+no input configuration... error snackbar...
+
+copy platform-sample for BR toast
+
+screenshots
+github readme
+play store description
+r/homeassistant
+
+implemented using rest api
+
+privacy policy
+
+.gitignore secret.txt

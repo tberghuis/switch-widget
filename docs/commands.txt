@@ -1,0 +1,17 @@
+
+docker run -d \
+  --name homeassistant \
+  --privileged \
+  --restart=unless-stopped \
+  -e TZ=Australia/Sydney \
+  -v /TOM/docker/homeassistant:/config \
+  --network=host \
+  ghcr.io/home-assistant/home-assistant:stable
+
+
+  docker run -d --name homeassistant --privileged --restart=unless-stopped -e TZ=Australia/Sydney -v /TOM/docker/homeassistant:/config  --network=host ghcr.io/home-assistant/home-assistant:stable
+
+
+docker container stop homeassistant
+
+docker start homeassistant

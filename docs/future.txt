@@ -1,0 +1,13 @@
+how to make glance Switch bigger
+
+widget errors
+  show toast message
+    post notification permission?
+
+Toast message if HA rest api "unavailable" on refresh
+
+winge about glanceid/appwidgetid configuration activity
+
+configuration activity cancel button, back press
+  delete remove widget
+  related to EXTRA_APPWIDGET_ID bug

@@ -1,0 +1,7 @@
+error snackbar and (toasts for widget)
+text.txt
+  airplane mode
+  invalid token
+  http cleartext manifest
+  invalid baseurl
+  ...
