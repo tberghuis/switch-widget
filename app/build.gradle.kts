@@ -11,7 +11,7 @@ android {
   compileSdk = 34
 
   defaultConfig {
-    applicationId = "dev.tberghuis.widgetglance"
+    applicationId = "dev.tberghuis.switchwidgetforha"
     minSdk = 28
     // todo review
     targetSdk = 33
