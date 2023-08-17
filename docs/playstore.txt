@@ -1,0 +1,8 @@
+Short description
+
+Control your switches managed by Home Assistant using home screen widgets.
+
+Full description
+
+This app allows you to control Home Assistant switches via Widgets displayed on your home screen.
+Uses the Home Assistant REST API for communication.
