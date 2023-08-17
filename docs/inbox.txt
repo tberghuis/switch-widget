@@ -30,5 +30,3 @@ r/homeassistant
 implemented using rest api
 
 privacy policy
-
-.gitignore secret.txt
