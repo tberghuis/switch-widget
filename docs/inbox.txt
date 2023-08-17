@@ -30,3 +30,4 @@ r/homeassistant
 implemented using rest api
 
 privacy policy
+https://tberghuis.dev/switch-widget/privacy-policy.html
