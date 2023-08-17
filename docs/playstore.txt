@@ -1,8 +1,11 @@
 Short description
 
-Control your switches managed by Home Assistant using home screen widgets.
+Home screen widgets to control your switches managed by Home Assistant
 
 Full description
 
 This app allows you to control Home Assistant switches via Widgets displayed on your home screen.
+
 Uses the Home Assistant REST API for communication.
+
+App is open source: https://github.com/tberghuis/switch-widget
