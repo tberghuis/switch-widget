@@ -7,3 +7,9 @@ oracle cloud fake HA server???
 goal, "ok google, pool on"
 "pool on" is configured shortcut to open shortcut. like "note boat"
 
+for each DB entry
+  NAME on
+  NAME off
+  NAME status
+    replies with Toast message
+      
