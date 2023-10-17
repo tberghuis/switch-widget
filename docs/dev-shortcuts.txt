@@ -23,3 +23,15 @@ then google assistant integration.
 
 
 getMaxShortcutCountPerActivity = 15 for poco F3
+
+###############3
+implement deeplink
+switchwidget://switchwidget/<switch_id>/<action>
+
+create a website to open deeplinks
+  https://deeplink.tberghuis.dev/switchwidget://switchwidget/<switch_id>/<action>
+
+google assistant create routine
+  "pool on" -> https://deeplink.tberghuis.dev/switchwidget://switchwidget/1/ON
+
+see if website is possible with noteboat demo
