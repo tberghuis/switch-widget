@@ -52,3 +52,8 @@ https://stackoverflow.com/questions/48541106/android-app-links-with-github-pages
 ...
 app links docs
 ...
+
+
+jsbin
+<a href="https://switch-widget-tmp.tberghuis.dev/willitblend">willitblend</a>
+
