@@ -38,6 +38,7 @@ see if website is possible with noteboat demo
 
 1st try
 https://switchwidget.tberghuis.dev/<entity_id>/<action>
+  github pages hash routing.... probably don't need to worry about 404 without hash?
   android app links
   see if google assistant will directly open the app
   is there some sort of qualification process as any app could try to handle any domain???
