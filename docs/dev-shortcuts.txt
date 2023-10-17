@@ -46,3 +46,9 @@ https://switchwidget.tberghuis.dev/<entity_id>/<action>
 
 https://developer.android.com/training/app-links
 https://stackoverflow.com/questions/48541106/android-app-links-with-github-pages
+
+###############
+1. create switch-widget-tmp.tberghuis.dev
+...
+app links docs
+...
