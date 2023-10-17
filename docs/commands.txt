@@ -1,17 +1,3 @@
 
-docker run -d \
-  --name homeassistant \
-  --privileged \
-  --restart=unless-stopped \
-  -e TZ=Australia/Sydney \
-  -v /TOM/docker/homeassistant:/config \
-  --network=host \
-  ghcr.io/home-assistant/home-assistant:stable
+adb shell am start -W -a android.intent.action.VIEW -d "http://switch-widget-tmp.tberghuis.dev/willitblend" dev.tberghuis.switchwidgetforha
 
-
-  docker run -d --name homeassistant --privileged --restart=unless-stopped -e TZ=Australia/Sydney -v /TOM/docker/homeassistant:/config  --network=host ghcr.io/home-assistant/home-assistant:stable
-
-
-docker container stop homeassistant
-
-docker start homeassistant
