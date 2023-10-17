@@ -1,6 +1,7 @@
 
 https://developer.android.com/develop/ui/views/launch/shortcuts
 [https://developer.android.com/guide/app-actions/dynamic-shortcuts]
+https://developer.android.com/guide/app-actions/overview#app_actions
 
 oracle cloud fake HA server???
 
@@ -17,3 +18,8 @@ for each DB entry
 
 https://developer.android.com/develop/ui/views/launch/shortcuts
 
+do this wrong hardcoded
+then google assistant integration.
+
+
+getMaxShortcutCountPerActivity = 15 for poco F3
