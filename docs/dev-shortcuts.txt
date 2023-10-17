@@ -1,4 +1,9 @@
+backup app data into secret.txt
+
 update gradle dependencies
+
+AGP upgrade assistant
+
 https://developer.android.com/develop/ui/views/launch/shortcuts
 [https://developer.android.com/guide/app-actions/dynamic-shortcuts]
 
@@ -12,4 +17,3 @@ for each DB entry
   NAME off
   NAME status
     replies with Toast message
-      
