@@ -35,3 +35,12 @@ google assistant create routine
   "pool on" -> https://deeplink.tberghuis.dev/switchwidget://switchwidget/1/ON
 
 see if website is possible with noteboat demo
+
+1st try
+https://switchwidget.tberghuis.dev/<entity_id>/<action>
+  android app links
+  see if google assistant will directly open the app
+  is there some sort of qualification process as any app could try to handle any domain???
+    configure DNS server with google config data?
+
+https://developer.android.com/training/app-links
