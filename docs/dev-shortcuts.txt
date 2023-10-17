@@ -45,3 +45,4 @@ https://switchwidget.tberghuis.dev/<entity_id>/<action>
     configure DNS server with google config data?
 
 https://developer.android.com/training/app-links
+https://stackoverflow.com/questions/48541106/android-app-links-with-github-pages
