@@ -1,0 +1,9 @@
+update gradle dependencies
+https://developer.android.com/develop/ui/views/launch/shortcuts
+[https://developer.android.com/guide/app-actions/dynamic-shortcuts]
+
+oracle cloud fake HA server???
+
+goal, "ok google, pool on"
+"pool on" is configured shortcut to open shortcut. like "note boat"
+
