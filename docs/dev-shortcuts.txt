@@ -53,3 +53,7 @@ https://stackoverflow.com/questions/48541106/android-app-links-with-github-pages
 app links docs
 ...
 https://developer.android.com/studio/write/app-link-indexing
+
+
+
+if it does not work, code deeplink.tberghuis.dev, settimeout open switch-widget-tmp.tberghuis.dev/<entity_id>/<action> in tab...

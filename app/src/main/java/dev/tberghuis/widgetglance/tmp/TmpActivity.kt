@@ -1,5 +1,6 @@
 package dev.tberghuis.widgetglance.tmp
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -16,11 +17,7 @@ class TmpActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
-
-    val action: String? = intent?.action
-    val data: Uri? = intent?.data
-    logd("TmpActivity onCreate action: $action")
-    logd("TmpActivity onCreate data: $data")
+    handleIntent(intent)
 
     setContent {
       WidgetGlanceTheme {
@@ -30,4 +27,17 @@ class TmpActivity : ComponentActivity() {
       }
     }
   }
+
+  override fun onNewIntent(intent: Intent) {
+    super.onNewIntent(intent)
+    handleIntent(intent)
+  }
+
+  private fun handleIntent(intent: Intent) {
+    val action: String? = intent.action
+    val data: Uri? = intent.data
+    logd("TmpActivity onCreate action: $action")
+    logd("TmpActivity onCreate data: $data")
+  }
+
 }
