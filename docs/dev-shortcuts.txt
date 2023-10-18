@@ -68,7 +68,8 @@ last resort deeplink.tberghuis.dev
   list of deep links, target=_blank
 
 App link in fresh activity run task in work manager or short service
- Activity.finish()
+  short foreground service can probably emit a "Toast"
+  Activity.finish()
 
 compose navigation docs
 
