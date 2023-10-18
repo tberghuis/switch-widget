@@ -76,3 +76,4 @@ next task
 do the action
 check the DB for entityId and action
 
+fake HA server for play console testers - oracle cloud

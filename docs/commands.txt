@@ -8,8 +8,11 @@ keytool -list -v -keystore ~/.android/debug.keystore
 
 keytool -list -v -keystore /TOM/syncthing/syncthing-share/keys/android/switchwidgetforha.jks
 
-
+# Pool ON
 adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switch-widget-tmp.tberghuis.dev/switch.pc191ha_socket_1/turn_on"
+
+# Pool OFF
+adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switch-widget-tmp.tberghuis.dev/switch.pc191ha_socket_1/turn_off"
 
 adb shell pm set-app-links --package dev.tberghuis.switchwidgetforha 0 all
 

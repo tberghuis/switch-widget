@@ -14,7 +14,9 @@ fun TmpScreen(
   vm: TmpVm = viewModel()
 ) {
   Column {
-    Text("tmp screen")
+    Text("Pool ON") // from optional parameter ?command_name=
+    Text("LOADING...")
+    Text("result: OK")
     Text("vm ${vm.fsdfsd}")
   }
 }
