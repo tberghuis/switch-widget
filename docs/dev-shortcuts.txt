@@ -63,7 +63,7 @@ if it does not work, code deeplink.tberghuis.dev, settimeout open switch-widget-
   and google to index website
 
 last resort deeplink.tberghuis.dev
-  "hey google, deep links"
+  "hey google, deep links" (routine https://deeplink.tberghuis.dev)
   mobile friendly web page or instant app
   list of deep links, target=_blank
 
