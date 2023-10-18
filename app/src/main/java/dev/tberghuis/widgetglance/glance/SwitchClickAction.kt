@@ -13,6 +13,7 @@ import dev.tberghuis.widgetglance.data.SwitchStateResponse
 import dev.tberghuis.widgetglance.logd
 import dev.tberghuis.widgetglance.provideHaHttpClient
 import dev.tberghuis.widgetglance.sendBroadcastToastReceiver
+import dev.tberghuis.widgetglance.usecase.postHaSwitchAction
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.client.request.post
@@ -42,15 +43,17 @@ class SwitchClickAction : ActionCallback {
     SwitchWidget().update(context, glanceId)
 
     // todo errors to toast, broadcast receiver
-    try {
-      // call HA rest api
-      val action = if (checked) "turn_on" else "turn_off"
-      context.provideHaHttpClient().post("/api/services/switch/$action") {
-        setBody(ServiceData(entityId))
-      }
-    } catch (e: Exception) {
-      logd("error $e")
-    }
+//    try {
+//      // call HA rest api
+//      val action = if (checked) "turn_on" else "turn_off"
+//      context.provideHaHttpClient().post("/api/services/switch/$action") {
+//        setBody(ServiceData(entityId))
+//      }
+//    } catch (e: Exception) {
+//      logd("error $e")
+//    }
+    val action = if (checked) "turn_on" else "turn_off"
+    postHaSwitchAction(context, entityId, action)
   }
 }
 
