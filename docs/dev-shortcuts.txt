@@ -62,7 +62,13 @@ if it does not work, code deeplink.tberghuis.dev, settimeout open switch-widget-
   and play console manifest.xml
   and google to index website
 
+last resort deeplink.tberghuis.dev
+  "hey google, deep links"
+  mobile friendly web page or instant app
+  list of deep links, target=_blank
+
 App link in fresh activity run task in work manager or short service
  Activity.finish()
 
 compose navigation docs
+
