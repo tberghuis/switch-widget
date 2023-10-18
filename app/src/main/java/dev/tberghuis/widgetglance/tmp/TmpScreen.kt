@@ -30,11 +30,12 @@ fun MyNavHost() {
         uriPattern = "https://switch-widget-tmp.tberghuis.dev/{entityId}/{action}"
       }),
     ) { backStackEntry ->
-      val entityId = backStackEntry.arguments?.getString("entityId")
-      val action = backStackEntry.arguments?.getString("action")
-      Column {
-        Text("MyNavHost entityId $entityId action $action")
-      }
+//      val entityId = backStackEntry.arguments?.getString("entityId")
+//      val action = backStackEntry.arguments?.getString("action")
+//      Column {
+//        Text("MyNavHost entityId $entityId action $action")
+//      }
+      TmpScreen()
     }
   }
 }
