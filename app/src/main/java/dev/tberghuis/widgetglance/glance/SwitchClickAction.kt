@@ -43,15 +43,6 @@ class SwitchClickAction : ActionCallback {
     SwitchWidget().update(context, glanceId)
 
     // todo errors to toast, broadcast receiver
-//    try {
-//      // call HA rest api
-//      val action = if (checked) "turn_on" else "turn_off"
-//      context.provideHaHttpClient().post("/api/services/switch/$action") {
-//        setBody(ServiceData(entityId))
-//      }
-//    } catch (e: Exception) {
-//      logd("error $e")
-//    }
     val action = if (checked) "turn_on" else "turn_off"
     postHaSwitchAction(context, entityId, action)
   }
