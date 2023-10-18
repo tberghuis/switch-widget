@@ -22,7 +22,7 @@ class TmpActivity : ComponentActivity() {
     setContent {
       WidgetGlanceTheme {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-          TmpScreen()
+          MyNavHost()
         }
       }
     }

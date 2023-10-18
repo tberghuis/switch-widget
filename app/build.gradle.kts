@@ -51,7 +51,6 @@ android {
 }
 
 dependencies {
-
   implementation("androidx.core:core-ktx:1.12.0")
   implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
   implementation("androidx.activity:activity-compose:1.8.0")
@@ -72,11 +71,7 @@ dependencies {
   implementation("androidx.glance:glance-appwidget:1.0.0")
   implementation("androidx.glance:glance-material3:1.0.0")
 
-//  implementation("androidx.glance:glance:1.0.0-alpha05")
-//  implementation("androidx.glance:glance-appwidget:1.0.0-alpha05")
-
   implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-
 
   val ktor_version = "2.3.3"
   implementation("io.ktor:ktor-client-core:$ktor_version")
@@ -84,4 +79,5 @@ dependencies {
   implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
   implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 
+  implementation("androidx.navigation:navigation-compose:2.7.4")
 }

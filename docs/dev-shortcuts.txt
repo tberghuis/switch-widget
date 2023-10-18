@@ -72,4 +72,4 @@ App link in fresh activity run task in work manager or short service
   Activity.finish()
 
 compose navigation docs
-
+https://developer.android.com/jetpack/compose/navigation
