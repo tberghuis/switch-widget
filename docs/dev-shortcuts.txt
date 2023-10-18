@@ -60,4 +60,5 @@ google assistant routine
 if it does not work, code deeplink.tberghuis.dev, settimeout open switch-widget-tmp.tberghuis.dev/<entity_id>/<action> in tab...
   i think i might need to wait for google assistant to index assetlinks.json
   and play console manifest.xml
+  and google to index website
 
