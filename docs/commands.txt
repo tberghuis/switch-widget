@@ -9,7 +9,7 @@ keytool -list -v -keystore ~/.android/debug.keystore
 keytool -list -v -keystore /TOM/syncthing/syncthing-share/keys/android/switchwidgetforha.jks
 
 
-adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switch-widget-tmp.tberghuis.dev/willitblend"
+adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switch-widget-tmp.tberghuis.dev/entity_5435/action_on"
 
 adb shell pm set-app-links --package dev.tberghuis.switchwidgetforha 0 all
 
