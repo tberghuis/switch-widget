@@ -71,5 +71,8 @@ App link in fresh activity run task in work manager or short service
   short foreground service can probably emit a "Toast"
   Activity.finish()
 
-compose navigation docs
-https://developer.android.com/jetpack/compose/navigation
+############33
+next task
+do the action
+check the DB for entityId and action
+
