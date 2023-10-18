@@ -64,3 +64,5 @@ if it does not work, code deeplink.tberghuis.dev, settimeout open switch-widget-
 
 App link in fresh activity run task in work manager or short service
  Activity.finish()
+
+compose navigation docs
