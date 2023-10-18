@@ -62,3 +62,5 @@ if it does not work, code deeplink.tberghuis.dev, settimeout open switch-widget-
   and play console manifest.xml
   and google to index website
 
+App link in fresh activity run task in work manager or short service
+ Activity.finish()
