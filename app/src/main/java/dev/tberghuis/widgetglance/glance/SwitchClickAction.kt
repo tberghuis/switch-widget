@@ -13,6 +13,7 @@ import dev.tberghuis.widgetglance.data.SwitchStateResponse
 import dev.tberghuis.widgetglance.logd
 import dev.tberghuis.widgetglance.provideHaHttpClient
 import dev.tberghuis.widgetglance.sendBroadcastToastReceiver
+import dev.tberghuis.widgetglance.usecase.getHaSwitchState
 import dev.tberghuis.widgetglance.usecase.postHaSwitchAction
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -59,24 +60,25 @@ class RefreshClickAction : ActionCallback {
     val entityId = requireNotNull(parameters[entityIdKey]) {
       "Add $entityIdKey parameter in the ActionParameters."
     }
-    val response: HttpResponse
-    val state: String
-    try {
-      response = context.provideHaHttpClient().get("/api/states/$entityId")
-      if (response.status != HttpStatusCode.OK) {
-        // todo toast message
-        logd("get /api/states/$entityId HttpStatusCode ${response.status}")
-        // context.sendBroadcastToastReceiver()
-        return
-      }
-      state = response.body<SwitchStateResponse>().state
-    } catch (e: Exception) {
-      logd("RefreshClickAction error: $e")
-      // todo toast message
-      return
-    }
+//    val response: HttpResponse
+//    val state: String
+//    try {
+//      response = context.provideHaHttpClient().get("/api/states/$entityId")
+//      if (response.status != HttpStatusCode.OK) {
+//        // todo toast message
+//        logd("get /api/states/$entityId HttpStatusCode ${response.status}")
+//        // context.sendBroadcastToastReceiver()
+//        return
+//      }
+//      state = response.body<SwitchStateResponse>().state
+//    } catch (e: Exception) {
+//      logd("RefreshClickAction error: $e")
+//      // todo toast message
+//      return
+//    }
 
-    logd("RefreshClickAction response $response")
+    val state = getHaSwitchState(context, entityId) ?: return
+
     logd("RefreshClickAction state $state")
 
     val isOn = state == "on"

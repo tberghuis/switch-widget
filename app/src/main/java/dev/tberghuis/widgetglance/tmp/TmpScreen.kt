@@ -30,7 +30,11 @@ fun MyNavHost() {
       "switch_action",
       deepLinks = listOf(navDeepLink {
         uriPattern = "https://switch-widget-tmp.tberghuis.dev/{entityId}/{action}"
-      }),
+      },
+
+
+
+        ),
     ) { backStackEntry ->
 //      val entityId = backStackEntry.arguments?.getString("entityId")
 //      val action = backStackEntry.arguments?.getString("action")

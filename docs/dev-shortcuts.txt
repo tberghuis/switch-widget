@@ -80,3 +80,7 @@ fake HA server for play console testers - oracle cloud
 
 github pages switchwidgetforha.tberghuis.dev
   configure porkbun DNS, github, google app links .well-known
+
+#################
+status, action
+can i match multiple deeplinks
