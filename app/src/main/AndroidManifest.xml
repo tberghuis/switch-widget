@@ -49,8 +49,6 @@
                 <data android:scheme="https" />
                 <data android:host="switch-widget-tmp.tberghuis.dev" />
             </intent-filter>
-
-
         </activity>
 
 
