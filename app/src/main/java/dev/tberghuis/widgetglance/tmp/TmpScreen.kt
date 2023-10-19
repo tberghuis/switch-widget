@@ -14,10 +14,9 @@ fun TmpScreen(
   vm: TmpVm = viewModel()
 ) {
   Column {
-    Text("Pool ON") // from optional parameter ?command_name=
+    Text("${vm.switchName ?: vm.entityId} ${vm.action}") // from optional parameter ?command_name=
     Text("LOADING...")
     Text("result: OK")
-    Text("vm ${vm.fsdfsd}")
   }
 }
 
@@ -28,13 +27,12 @@ fun MyNavHost() {
   NavHost(navController, "switch_action") {
     composable(
       "switch_action",
-      deepLinks = listOf(navDeepLink {
-        uriPattern = "https://switch-widget-tmp.tberghuis.dev/{entityId}/{action}"
-      },
-
-
-
-        ),
+      deepLinks = listOf(
+        navDeepLink {
+          uriPattern =
+            "https://switch-widget-tmp.tberghuis.dev/{entityId}/{action}?switch_name={switchName}"
+        }
+      ),
     ) { backStackEntry ->
 //      val entityId = backStackEntry.arguments?.getString("entityId")
 //      val action = backStackEntry.arguments?.getString("action")

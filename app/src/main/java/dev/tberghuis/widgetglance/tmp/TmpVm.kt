@@ -1,6 +1,9 @@
 package dev.tberghuis.widgetglance.tmp
 
 import android.app.Application
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
@@ -14,16 +17,25 @@ class TmpVm(
   private val savedStateHandle: SavedStateHandle
 ) :
   AndroidViewModel(application) {
-
-  val fsdfsd = "fdsfsd"
+  var entityId by mutableStateOf("")
+  var action by mutableStateOf("")
+  var switchName: String? by mutableStateOf(null)
 
   init {
     logd("TmpVm init savedStateHandle $savedStateHandle")
     logd("TmpVm init entityId ${savedStateHandle.get<String>("entityId")}")
     logd("TmpVm init action ${savedStateHandle.get<String>("action")}")
 
+    assignDeepLinkParamsToState()
     performAction()
   }
+
+  private fun assignDeepLinkParamsToState() {
+    entityId = savedStateHandle.get<String>("entityId")!!
+    action = savedStateHandle.get<String>("action")!!
+    switchName = savedStateHandle.get<String>("switchName")
+  }
+
 
   private fun performAction() {
     viewModelScope.launch(IO) {
