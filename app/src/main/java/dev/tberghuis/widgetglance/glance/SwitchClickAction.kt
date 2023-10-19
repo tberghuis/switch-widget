@@ -60,22 +60,6 @@ class RefreshClickAction : ActionCallback {
     val entityId = requireNotNull(parameters[entityIdKey]) {
       "Add $entityIdKey parameter in the ActionParameters."
     }
-//    val response: HttpResponse
-//    val state: String
-//    try {
-//      response = context.provideHaHttpClient().get("/api/states/$entityId")
-//      if (response.status != HttpStatusCode.OK) {
-//        // todo toast message
-//        logd("get /api/states/$entityId HttpStatusCode ${response.status}")
-//        // context.sendBroadcastToastReceiver()
-//        return
-//      }
-//      state = response.body<SwitchStateResponse>().state
-//    } catch (e: Exception) {
-//      logd("RefreshClickAction error: $e")
-//      // todo toast message
-//      return
-//    }
 
     val state = getHaSwitchState(context, entityId) ?: return
 
