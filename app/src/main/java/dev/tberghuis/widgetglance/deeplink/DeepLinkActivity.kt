@@ -10,7 +10,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import dev.tberghuis.widgetglance.logd
-import dev.tberghuis.widgetglance.tmp.MyNavHost
 import dev.tberghuis.widgetglance.ui.theme.WidgetGlanceTheme
 
 class DeepLinkActivity : ComponentActivity() {
@@ -20,7 +19,7 @@ class DeepLinkActivity : ComponentActivity() {
     setContent {
       WidgetGlanceTheme {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-          MyNavHost()
+          DeepLinkNavHost()
         }
       }
     }
