@@ -1,88 +1,19 @@
-
-https://developer.android.com/develop/ui/views/launch/shortcuts
-[https://developer.android.com/guide/app-actions/dynamic-shortcuts]
-https://developer.android.com/guide/app-actions/overview#app_actions
-
 oracle cloud fake HA server???
 
 goal, "ok google, pool on"
-"pool on" is configured shortcut to open shortcut. like "note boat"
 
-for each DB entry
-  NAME on
-  NAME off
-  NAME status
-    replies with Toast message
+google assistant setup routine
+  https://switchwidgetforha.tberghuis.dev/<entity_id>/<action>?switch_name=<switch_name>
 
-############3
-
-https://developer.android.com/develop/ui/views/launch/shortcuts
-
-do this wrong hardcoded
-then google assistant integration.
-
-
-getMaxShortcutCountPerActivity = 15 for poco F3
-
-###############3
-implement deeplink
-switchwidget://switchwidget/<switch_id>/<action>
-
-create a website to open deeplinks
-  https://deeplink.tberghuis.dev/switchwidget://switchwidget/<switch_id>/<action>
-
-google assistant create routine
-  "pool on" -> https://deeplink.tberghuis.dev/switchwidget://switchwidget/1/ON
-
-see if website is possible with noteboat demo
-
-1st try
-https://switchwidget.tberghuis.dev/<entity_id>/<action>
-  github pages hash routing.... probably don't need to worry about 404 without hash?
-  android app links
-  see if google assistant will directly open the app
-  is there some sort of qualification process as any app could try to handle any domain???
-    configure DNS server with google config data?
-
-https://developer.android.com/training/app-links
-https://stackoverflow.com/questions/48541106/android-app-links-with-github-pages
-
-###############
-1. create switch-widget-tmp.tberghuis.dev
-...
-app links docs
-...
-https://developer.android.com/studio/write/app-link-indexing
-
-google assistant routine
-  "open https://switch-widget-tmp.tberghuis.dev/<entity_id>/<action>"
-
-if it does not work, code deeplink.tberghuis.dev, settimeout open switch-widget-tmp.tberghuis.dev/<entity_id>/<action> in tab...
-  i think i might need to wait for google assistant to index assetlinks.json
-  and play console manifest.xml
-  and google to index website
-
-last resort deeplink.tberghuis.dev
-  "hey google, deep links" (routine https://deeplink.tberghuis.dev)
-  mobile friendly web page or instant app
-  list of deep links, target=_blank
-
-App link in fresh activity run task in work manager or short service
-  short foreground service can probably emit a "Toast"
-  Activity.finish()
-
-############33
-next task
-do the action
-check the DB for entityId and action
-
-fake HA server for play console testers - oracle cloud
+whilst waiting for GA to directly open switchwidgetforha.tberghuis.dev
+  routine "deep link", open webpage (deeplink.tberghuis.dev) with list of links
+  target=_blank
 
 github pages switchwidgetforha.tberghuis.dev
   configure porkbun DNS, github, google app links .well-known
 
-#################
-status, action
-can i match multiple deeplinks
 
-result for turn on off
+update URL, put in CONSTANT
+https://switchwidgetforha.tberghuis.dev
+
+retire git project switch-widget-tmp [cull, delete github]
