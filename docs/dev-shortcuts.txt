@@ -12,8 +12,4 @@ whilst waiting for GA to directly open switchwidgetforha.tberghuis.dev
 github pages switchwidgetforha.tberghuis.dev
   configure porkbun DNS, github, google app links .well-known
 
-
-update URL, put in CONSTANT
-https://switchwidgetforha.tberghuis.dev
-
 retire git project switch-widget-tmp [cull, delete github]
