@@ -54,7 +54,7 @@ class TmpVm(
         }
 
         "turn_on", "turn_off" -> {
-          postHaSwitchAction(application, entityId, action)
+          result = postHaSwitchAction(application, entityId, action) ?: ""
         }
       }
     }

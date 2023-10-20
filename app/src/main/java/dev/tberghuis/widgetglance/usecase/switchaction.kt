@@ -7,14 +7,19 @@ import dev.tberghuis.widgetglance.provideHaHttpClient
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 
-suspend fun postHaSwitchAction(context: Context, entityId: String, action: String) {
+
+// return http status code
+suspend fun postHaSwitchAction(context: Context, entityId: String, action: String): String? {
   logd("postHaSwitchAction entityId $entityId")
 
   try {
-    context.provideHaHttpClient().post("/api/services/switch/$action") {
+    val response = context.provideHaHttpClient().post("/api/services/switch/$action") {
       setBody(ServiceData(entityId))
     }
+    logd("postHaSwitchAction response $response")
+    return response.status.toString()
   } catch (e: Exception) {
     logd("error $e")
   }
+  return null
 }

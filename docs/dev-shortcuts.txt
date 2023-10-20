@@ -84,3 +84,5 @@ github pages switchwidgetforha.tberghuis.dev
 #################
 status, action
 can i match multiple deeplinks
+
+result for turn on off
