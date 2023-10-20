@@ -7,7 +7,6 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
-import dev.tberghuis.widgetglance.logd
 import dev.tberghuis.widgetglance.usecase.getHaSwitchState
 import dev.tberghuis.widgetglance.usecase.postHaSwitchAction
 import kotlinx.coroutines.launch
@@ -23,8 +22,6 @@ class DeepLinkVm(
   var result by mutableStateOf("")
 
   init {
-    logd("TmpVm init entityId ${savedStateHandle.get<String>("entityId")}")
-    logd("TmpVm init action ${savedStateHandle.get<String>("action")}")
     assignDeepLinkParamsToState()
     performAction()
   }

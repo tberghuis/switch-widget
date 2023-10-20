@@ -15,7 +15,6 @@ fun DeepLinkNavHost() {
       deepLinks = listOf(
         navDeepLink {
           uriPattern =
-//            "https://switch-widget-tmp.tberghuis.dev/{entityId}/{action}?switch_name={switchName}"
           "https://switchwidgetforha.tberghuis.dev/{entityId}/{action}?switch_name={switchName}"
         }
       ),
