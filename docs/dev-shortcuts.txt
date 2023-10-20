@@ -14,11 +14,9 @@ github pages switchwidgetforha.tberghuis.dev
 
 retire git project switch-widget-tmp [cull, delete github]
 
-clean code
 release
   version
   build
   upload
   git merge
   tag release apk
-  
