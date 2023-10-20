@@ -44,15 +44,9 @@ class TmpVm(
 
 
   private fun performAction() {
-    viewModelScope.launch(IO) {
-      val entityId = savedStateHandle.get<String>("entityId")!!
-      val action = savedStateHandle.get<String>("action")!!
-      // how to convert into when statement??? suspend in
-//      if (action == "status") {
-//        getHaSwitchState(application, entityId)
-//      } else if (action == "turn_on" || action == "turn_off") {
-//        postHaSwitchAction(application, entityId, action)
-//      }
+    viewModelScope.launch {
+//      val entityId = savedStateHandle.get<String>("entityId")!!
+//      val action = savedStateHandle.get<String>("action")!!
 
       when (action) {
         "status" -> {
