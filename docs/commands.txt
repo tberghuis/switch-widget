@@ -6,13 +6,13 @@ cd "C:\Program Files\Java\jdk-17\bin"
 keytool -list -v -keystore /TOM/syncthing/syncthing-share/keys/android/switchwidgetforha.jks
 
 # Pool ON
-adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switch-widget-tmp.tberghuis.dev/switch.pc191ha_socket_1/turn_on?switch_name=pool"
+adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switchwidgetforha.tberghuis.dev/switch.pc191ha_socket_1/turn_on?switch_name=pool"
 
 # Pool OFF
-adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switch-widget-tmp.tberghuis.dev/switch.pc191ha_socket_1/turn_off"
+adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switchwidgetforha.tberghuis.dev/switch.pc191ha_socket_1/turn_off"
 
 # Pool status
-adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switch-widget-tmp.tberghuis.dev/switch.pc191ha_socket_1/status?switch_name=pool"
+adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://switchwidgetforha.tberghuis.dev/switch.pc191ha_socket_1/status?switch_name=pool"
 
 adb shell pm set-app-links --package dev.tberghuis.switchwidgetforha 0 all
 
