@@ -1,11 +1,8 @@
 
-adb shell am start -W -a android.intent.action.VIEW -d "http://switch-widget-tmp.tberghuis.dev/willitblend" dev.tberghuis.switchwidgetforha
-
 keytool -list -v -keystore ~/.android/debug.keystore
+cd "C:\Program Files\Java\jdk-17\bin"
+.\keytool.exe -list -v -keystore \users\tom\.android\debug.keystore
   password: android
-         SHA1: 1E:29:0F:AF:25:58:11:F0:FD:1E:AB:68:60:23:C4:6D:9D:4A:BE:C1
-         SHA256: 52:A4:79:B9:83:32:FE:23:6C:3D:9A:E1:01:DD:7A:33:63:64:C8:89:BF:25:28:7F:5A:DB:98:C8:6F:E7:36:4D
-
 keytool -list -v -keystore /TOM/syncthing/syncthing-share/keys/android/switchwidgetforha.jks
 
 # Pool ON
@@ -22,3 +19,5 @@ adb shell pm set-app-links --package dev.tberghuis.switchwidgetforha 0 all
 adb shell pm verify-app-links --re-verify dev.tberghuis.switchwidgetforha
 
 adb shell pm get-app-links dev.tberghuis.switchwidgetforha
+
+https://switchwidgetforha.tberghuis.dev/.well-known/assetlinks.json

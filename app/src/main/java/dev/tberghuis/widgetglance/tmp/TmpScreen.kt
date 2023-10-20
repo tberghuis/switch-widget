@@ -26,7 +26,6 @@ fun TmpScreen(
   }
 }
 
-
 @Composable
 fun MyNavHost() {
   val navController = rememberNavController()
@@ -36,15 +35,11 @@ fun MyNavHost() {
       deepLinks = listOf(
         navDeepLink {
           uriPattern =
-            "https://switch-widget-tmp.tberghuis.dev/{entityId}/{action}?switch_name={switchName}"
+//            "https://switch-widget-tmp.tberghuis.dev/{entityId}/{action}?switch_name={switchName}"
+          "https://switchwidgetforha.tberghuis.dev/{entityId}/{action}?switch_name={switchName}"
         }
       ),
-    ) { backStackEntry ->
-//      val entityId = backStackEntry.arguments?.getString("entityId")
-//      val action = backStackEntry.arguments?.getString("action")
-//      Column {
-//        Text("MyNavHost entityId $entityId action $action")
-//      }
+    ) {
       TmpScreen()
     }
   }
