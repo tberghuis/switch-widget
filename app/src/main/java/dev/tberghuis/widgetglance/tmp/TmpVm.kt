@@ -8,8 +8,10 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import dev.tberghuis.widgetglance.logd
+import dev.tberghuis.widgetglance.usecase.getHaSwitchState
 import dev.tberghuis.widgetglance.usecase.postHaSwitchAction
 import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class TmpVm(
@@ -20,6 +22,10 @@ class TmpVm(
   var entityId by mutableStateOf("")
   var action by mutableStateOf("")
   var switchName: String? by mutableStateOf(null)
+
+
+  var result by mutableStateOf("")
+
 
   init {
     logd("TmpVm init savedStateHandle $savedStateHandle")
@@ -39,9 +45,24 @@ class TmpVm(
 
   private fun performAction() {
     viewModelScope.launch(IO) {
-      val entityId = savedStateHandle.get<String>("entityId")
-      val action = savedStateHandle.get<String>("action")
-      postHaSwitchAction(application, entityId!!, action!!)
+      val entityId = savedStateHandle.get<String>("entityId")!!
+      val action = savedStateHandle.get<String>("action")!!
+      // how to convert into when statement??? suspend in
+//      if (action == "status") {
+//        getHaSwitchState(application, entityId)
+//      } else if (action == "turn_on" || action == "turn_off") {
+//        postHaSwitchAction(application, entityId, action)
+//      }
+
+      when (action) {
+        "status" -> {
+          result = getHaSwitchState(application, entityId) ?: ""
+        }
+
+        "turn_on", "turn_off" -> {
+          postHaSwitchAction(application, entityId, action)
+        }
+      }
     }
   }
 }

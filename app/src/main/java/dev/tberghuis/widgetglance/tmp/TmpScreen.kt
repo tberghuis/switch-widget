@@ -16,7 +16,7 @@ fun TmpScreen(
   Column {
     Text("${vm.switchName ?: vm.entityId} ${vm.action}") // from optional parameter ?command_name=
     Text("LOADING...")
-    Text("result: OK")
+    Text("result: ${vm.result}")
   }
 }
 
