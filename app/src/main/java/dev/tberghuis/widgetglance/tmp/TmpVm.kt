@@ -10,8 +10,6 @@ import androidx.lifecycle.viewModelScope
 import dev.tberghuis.widgetglance.logd
 import dev.tberghuis.widgetglance.usecase.getHaSwitchState
 import dev.tberghuis.widgetglance.usecase.postHaSwitchAction
-import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class TmpVm(
@@ -22,16 +20,11 @@ class TmpVm(
   var entityId by mutableStateOf("")
   var action by mutableStateOf("")
   var switchName: String? by mutableStateOf(null)
-
-
   var result by mutableStateOf("")
 
-
   init {
-    logd("TmpVm init savedStateHandle $savedStateHandle")
     logd("TmpVm init entityId ${savedStateHandle.get<String>("entityId")}")
     logd("TmpVm init action ${savedStateHandle.get<String>("action")}")
-
     assignDeepLinkParamsToState()
     performAction()
   }
@@ -42,12 +35,8 @@ class TmpVm(
     switchName = savedStateHandle.get<String>("switchName")
   }
 
-
   private fun performAction() {
     viewModelScope.launch {
-//      val entityId = savedStateHandle.get<String>("entityId")!!
-//      val action = savedStateHandle.get<String>("action")!!
-
       when (action) {
         "status" -> {
           result = getHaSwitchState(application, entityId) ?: ""
